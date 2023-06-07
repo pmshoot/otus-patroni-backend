@@ -1,0 +1,61 @@
+autostop:
+  autostop:
+  - http(5xx,10%,5s)
+  enabled: true
+  package: yandextank.plugins.Autostop
+bfg:
+  enabled: false
+  package: yandextank.plugins.Bfg
+console:
+  enabled: true
+  package: yandextank.plugins.Console
+core: {}
+influx:
+  enabled: false
+  package: yandextank.plugins.InfluxUploader
+jmeter:
+  enabled: false
+  package: yandextank.plugins.JMeter
+json_report:
+  enabled: true
+  package: yandextank.plugins.JsonReport
+metaconf:
+  enabled: false
+  package: yandextank.plugins.MetaConf
+offline_report:
+  enabled: false
+  package: yandextank.plugins.OfflineReport
+opentsdb:
+  enabled: false
+  package: yandextank.plugins.OpenTSDBUploader
+overload:
+  enabled: false
+  package: yandextank.plugins.DataUploader
+pandora:
+  enabled: false
+  package: yandextank.plugins.Pandora
+phantom:
+  address: 127.0.0.1:8000
+  enabled: true
+  header_http: '1.1'
+  headers:
+  - '[Connection: close]'
+  - '[Content-Type: application/json]'
+  load_profile:
+    load_type: rps
+    schedule: line(1, 10, 1m)
+  package: yandextank.plugins.Phantom
+  uris:
+  - /notes/
+rcassert:
+  enabled: true
+  package: yandextank.plugins.RCAssert
+rcheck:
+  enabled: true
+  package: yandextank.plugins.ResourceCheck
+shellexec:
+  enabled: true
+  package: yandextank.plugins.ShellExec
+telegraf:
+  enabled: false
+  package: yandextank.plugins.Telegraf

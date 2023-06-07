@@ -1,0 +1,46 @@
+2023-06-04 19:20:02,286	Exception occurred:
+<class 'PermissionError'>: [Errno 13] Permission denied: '/var/lock/lunapark_20gllteo.lock'
+  File "/home/pmike/workspace/otus/PostgreSQL_admin_2023-02/project/pgcluster/backend/venv/lib/python3.9/site-packages/yandextank/core/tankworker.py", line 66, in run
+    lock = self.get_lock()
+
+  File "/home/pmike/workspace/otus/PostgreSQL_admin_2023-02/project/pgcluster/backend/venv/lib/python3.9/site-packages/yandextank/core/tankworker.py", line 162, in get_lock
+    lock = Lock(self.test_id, self.folder).acquire(self.core.lock_dir,
+
+  File "/home/pmike/workspace/otus/PostgreSQL_admin_2023-02/project/pgcluster/backend/venv/lib/python3.9/site-packages/yandextank/core/tankcore.py", line 627, in acquire
+    fh, self.lock_file = tempfile.mkstemp(suffix, prefix, lock_dir)
+
+  File "/usr/lib/python3.9/tempfile.py", line 336, in mkstemp
+    return _mkstemp_inner(dir, prefix, suffix, flags, output_type)
+
+  File "/usr/lib/python3.9/tempfile.py", line 255, in _mkstemp_inner
+    fd = _os.open(file, flags, 0o600)
+
+2023-06-04 19:24:11,188	Exception occurred:
+<class 'PermissionError'>: [Errno 13] Permission denied: '/var/lock/lunapark_bnhmgshb.lock'
+  File "/home/pmike/workspace/otus/PostgreSQL_admin_2023-02/project/pgcluster/backend/venv/lib/python3.9/site-packages/yandextank/core/tankworker.py", line 66, in run
+    lock = self.get_lock()
+
+  File "/home/pmike/workspace/otus/PostgreSQL_admin_2023-02/project/pgcluster/backend/venv/lib/python3.9/site-packages/yandextank/core/tankworker.py", line 162, in get_lock
+    lock = Lock(self.test_id, self.folder).acquire(self.core.lock_dir,
+
+  File "/home/pmike/workspace/otus/PostgreSQL_admin_2023-02/project/pgcluster/backend/venv/lib/python3.9/site-packages/yandextank/core/tankcore.py", line 627, in acquire
+    fh, self.lock_file = tempfile.mkstemp(suffix, prefix, lock_dir)
+
+  File "/usr/lib/python3.9/tempfile.py", line 336, in mkstemp
+    return _mkstemp_inner(dir, prefix, suffix, flags, output_type)
+
+  File "/usr/lib/python3.9/tempfile.py", line 255, in _mkstemp_inner
+    fd = _os.open(file, flags, 0o600)
+
+2023-06-04 19:24:20,730	Exception occurred:
+<class 'OSError'>: Phantom I/O engine not found. 
+More information: http://yandextank.readthedocs.io/en/latest/install.html
+  File "/home/pmike/workspace/otus/PostgreSQL_admin_2023-02/project/pgcluster/backend/venv/lib/python3.9/site-packages/yandextank/core/tankworker.py", line 72, in run
+    self.core.plugins_prepare_test()
+
+  File "/home/pmike/workspace/otus/PostgreSQL_admin_2023-02/project/pgcluster/backend/venv/lib/python3.9/site-packages/yandextank/core/tankcore.py", line 279, in plugins_prepare_test
+    plugin.prepare_test()
+
+  File "/home/pmike/workspace/otus/PostgreSQL_admin_2023-02/project/pgcluster/backend/venv/lib/python3.9/site-packages/yandextank/plugins/Phantom/plugin.py", line 102, in prepare_test
+    raise OSError("Phantom I/O engine not found. \nMore information: {doc_url}".format(
+

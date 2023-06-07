@@ -1,0 +1,24 @@
+2023-06-04 19:20:02,268 [INFO] root tankworker.py:153	Log file created
+2023-06-04 19:20:02,269 [INFO] root tankworker.py:157	Logging handler <FileHandler /home/pmike/workspace/otus/PostgreSQL_admin_2023-02/project/pgcluster/backend/ytank/tank_errors.log (WARNING)> added
+2023-06-04 19:20:02,269 [INFO] root tankworker.py:157	Logging handler <StreamHandler <stdout> (INFO)> added
+2023-06-04 19:20:02,269 [INFO] root tankworker.py:157	Logging handler <StreamHandler <stderr> (NOTSET)> added
+2023-06-04 19:20:02,286 [ERROR] yandextank.common.util util.py:815	Exception occurred:
+<class 'PermissionError'>: [Errno 13] Permission denied: '/var/lock/lunapark_20gllteo.lock'
+  File "/home/pmike/workspace/otus/PostgreSQL_admin_2023-02/project/pgcluster/backend/venv/lib/python3.9/site-packages/yandextank/core/tankworker.py", line 66, in run
+    lock = self.get_lock()
+
+  File "/home/pmike/workspace/otus/PostgreSQL_admin_2023-02/project/pgcluster/backend/venv/lib/python3.9/site-packages/yandextank/core/tankworker.py", line 162, in get_lock
+    lock = Lock(self.test_id, self.folder).acquire(self.core.lock_dir,
+
+  File "/home/pmike/workspace/otus/PostgreSQL_admin_2023-02/project/pgcluster/backend/venv/lib/python3.9/site-packages/yandextank/core/tankcore.py", line 627, in acquire
+    fh, self.lock_file = tempfile.mkstemp(suffix, prefix, lock_dir)
+
+  File "/usr/lib/python3.9/tempfile.py", line 336, in mkstemp
+    return _mkstemp_inner(dir, prefix, suffix, flags, output_type)
+
+  File "/usr/lib/python3.9/tempfile.py", line 255, in _mkstemp_inner
+    fd = _os.open(file, flags, 0o600)
+
+2023-06-04 19:20:02,286 [INFO] yandextank.common.util util.py:816	Trying to clean up
+2023-06-04 19:20:02,290 [INFO] yandextank.core.tankcore tankcore.py:411	Artifacts dir: /home/pmike/workspace/otus/PostgreSQL_admin_2023-02/project/pgcluster/backend/ytank/logs/2023-06-04_19-20-02.245717
+2023-06-04 19:20:02,291 [INFO] yandextank.core.tankcore tankcore.py:467	File not found to collect: validation_error.yaml

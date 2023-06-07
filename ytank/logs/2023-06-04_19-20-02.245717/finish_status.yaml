@@ -1,0 +1,16 @@
+exit_code: 1
+left_time: null
+lunapark_id: null
+lunapark_url: null
+status_code: FINISHED
+tank_msg: "Exception occurred:\n<class 'PermissionError'>: [Errno 13] Permission denied:\
+  \ '/var/lock/lunapark_20gllteo.lock'\n  File \"/home/pmike/workspace/otus/PostgreSQL_admin_2023-02/project/pgcluster/backend/venv/lib/python3.9/site-packages/yandextank/core/tankworker.py\"\
+  , line 66, in run\n    lock = self.get_lock()\n\n  File \"/home/pmike/workspace/otus/PostgreSQL_admin_2023-02/project/pgcluster/backend/venv/lib/python3.9/site-packages/yandextank/core/tankworker.py\"\
+  , line 162, in get_lock\n    lock = Lock(self.test_id, self.folder).acquire(self.core.lock_dir,\n\
+  \n  File \"/home/pmike/workspace/otus/PostgreSQL_admin_2023-02/project/pgcluster/backend/venv/lib/python3.9/site-packages/yandextank/core/tankcore.py\"\
+  , line 627, in acquire\n    fh, self.lock_file = tempfile.mkstemp(suffix, prefix,\
+  \ lock_dir)\n\n  File \"/usr/lib/python3.9/tempfile.py\", line 336, in mkstemp\n\
+  \    return _mkstemp_inner(dir, prefix, suffix, flags, output_type)\n\n  File \"\
+  /usr/lib/python3.9/tempfile.py\", line 255, in _mkstemp_inner\n    fd = _os.open(file,\
+  \ flags, 0o600)\n"
+test_id: 2023-06-04_19-20-02.245717

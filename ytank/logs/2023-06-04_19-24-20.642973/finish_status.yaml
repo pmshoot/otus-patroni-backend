@@ -1,0 +1,13 @@
+exit_code: 1
+left_time: null
+lunapark_id: null
+lunapark_url: null
+status_code: FINISHED
+tank_msg: "Exception occurred:\n<class 'OSError'>: Phantom I/O engine not found. \n\
+  More information: http://yandextank.readthedocs.io/en/latest/install.html\n  File\
+  \ \"/home/pmike/workspace/otus/PostgreSQL_admin_2023-02/project/pgcluster/backend/venv/lib/python3.9/site-packages/yandextank/core/tankworker.py\"\
+  , line 72, in run\n    self.core.plugins_prepare_test()\n\n  File \"/home/pmike/workspace/otus/PostgreSQL_admin_2023-02/project/pgcluster/backend/venv/lib/python3.9/site-packages/yandextank/core/tankcore.py\"\
+  , line 279, in plugins_prepare_test\n    plugin.prepare_test()\n\n  File \"/home/pmike/workspace/otus/PostgreSQL_admin_2023-02/project/pgcluster/backend/venv/lib/python3.9/site-packages/yandextank/plugins/Phantom/plugin.py\"\
+  , line 102, in prepare_test\n    raise OSError(\"Phantom I/O engine not found. \\\
+  nMore information: {doc_url}\".format(\n"
+test_id: 2023-06-04_19-24-20.642973

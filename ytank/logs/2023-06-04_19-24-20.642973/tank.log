@@ -1,0 +1,55 @@
+2023-06-04 19:24:20,667 [INFO] root tankworker.py:153	Log file created
+2023-06-04 19:24:20,667 [INFO] root tankworker.py:157	Logging handler <FileHandler /home/pmike/workspace/otus/PostgreSQL_admin_2023-02/project/pgcluster/backend/ytank/tank_errors.log (WARNING)> added
+2023-06-04 19:24:20,667 [INFO] root tankworker.py:157	Logging handler <StreamHandler <stdout> (INFO)> added
+2023-06-04 19:24:20,667 [INFO] root tankworker.py:157	Logging handler <StreamHandler <stderr> (NOTSET)> added
+2023-06-04 19:24:20,676 [INFO] root tankworker.py:69	Created a folder for the test. /home/pmike/workspace/otus/PostgreSQL_admin_2023-02/project/pgcluster/backend/ytank/logs/2023-06-04_19-24-20.642973
+2023-06-04 19:24:20,677 [INFO] yandextank.core.tankcore tankcore.py:257	Configuring plugins...
+2023-06-04 19:24:20,677 [INFO] yandextank.core.tankcore tankcore.py:206	Loading plugins...
+2023-06-04 19:24:20,677 [INFO] yandextank.core.tankcore tankcore.py:216	Trying to import module: autostop
+2023-06-04 19:24:20,677 [INFO] yandextank.core.tankcore tankcore.py:217	Path: yandextank.plugins.Autostop
+2023-06-04 19:24:20,678 [INFO] yandextank.core.tankcore tankcore.py:216	Trying to import module: console
+2023-06-04 19:24:20,678 [INFO] yandextank.core.tankcore tankcore.py:217	Path: yandextank.plugins.Console
+2023-06-04 19:24:20,678 [INFO] yandextank.core.tankcore tankcore.py:216	Trying to import module: json_report
+2023-06-04 19:24:20,678 [INFO] yandextank.core.tankcore tankcore.py:217	Path: yandextank.plugins.JsonReport
+2023-06-04 19:24:20,678 [INFO] yandextank.core.tankcore tankcore.py:216	Trying to import module: phantom
+2023-06-04 19:24:20,678 [INFO] yandextank.core.tankcore tankcore.py:217	Path: yandextank.plugins.Phantom
+2023-06-04 19:24:20,678 [INFO] yandextank.core.tankcore tankcore.py:216	Trying to import module: rcheck
+2023-06-04 19:24:20,678 [INFO] yandextank.core.tankcore tankcore.py:217	Path: yandextank.plugins.ResourceCheck
+2023-06-04 19:24:20,679 [INFO] yandextank.core.tankcore tankcore.py:216	Trying to import module: shellexec
+2023-06-04 19:24:20,679 [INFO] yandextank.core.tankcore tankcore.py:217	Path: yandextank.plugins.ShellExec
+2023-06-04 19:24:20,679 [INFO] yandextank.core.tankcore tankcore.py:216	Trying to import module: rcassert
+2023-06-04 19:24:20,679 [INFO] yandextank.core.tankcore tankcore.py:217	Path: yandextank.plugins.RCAssert
+2023-06-04 19:24:20,684 [INFO] yandextank.common.util util.py:578	Testing connection to resolved address 127.0.0.1 and port 8000
+2023-06-04 19:24:20,685 [INFO] yandextank.plugins.Phantom.utils utils.py:277	Resolved 127.0.0.1 into 127.0.0.1:8000
+2023-06-04 19:24:20,685 [INFO] yandextank.stepper.main main.py:197	Configuring StepperWrapper...
+2023-06-04 19:24:20,685 [INFO] yandextank.stepper.main main.py:336	Making stpd-file: /home/pmike/workspace/otus/PostgreSQL_admin_2023-02/project/pgcluster/backend/ytank/logs/_c18e673ba8582d04bf27a99afdf2ac28.stpd
+2023-06-04 19:24:20,686 [INFO] yandextank.stepper.config config.py:126	Using UriStyleGenerator ammo reader
+2023-06-04 19:24:20,724 [INFO] yandextank.core.tankcore tankcore.py:274	Preparing test...
+2023-06-04 19:24:20,730 [ERROR] yandextank.common.util util.py:815	Exception occurred:
+<class 'OSError'>: Phantom I/O engine not found. 
+More information: http://yandextank.readthedocs.io/en/latest/install.html
+  File "/home/pmike/workspace/otus/PostgreSQL_admin_2023-02/project/pgcluster/backend/venv/lib/python3.9/site-packages/yandextank/core/tankworker.py", line 72, in run
+    self.core.plugins_prepare_test()
+
+  File "/home/pmike/workspace/otus/PostgreSQL_admin_2023-02/project/pgcluster/backend/venv/lib/python3.9/site-packages/yandextank/core/tankcore.py", line 279, in plugins_prepare_test
+    plugin.prepare_test()
+
+  File "/home/pmike/workspace/otus/PostgreSQL_admin_2023-02/project/pgcluster/backend/venv/lib/python3.9/site-packages/yandextank/plugins/Phantom/plugin.py", line 102, in prepare_test
+    raise OSError("Phantom I/O engine not found. \nMore information: {doc_url}".format(
+
+2023-06-04 19:24:20,730 [INFO] yandextank.common.util util.py:816	Trying to clean up
+2023-06-04 19:24:20,730 [INFO] yandextank.core.tankcore tankcore.py:568	Cleaning up plugin plugin_autostop
+2023-06-04 19:24:20,730 [INFO] yandextank.core.tankcore tankcore.py:568	Cleaning up plugin plugin_console
+2023-06-04 19:24:20,730 [INFO] yandextank.core.tankcore tankcore.py:568	Cleaning up plugin plugin_json_report
+2023-06-04 19:24:20,730 [INFO] yandextank.core.tankcore tankcore.py:568	Cleaning up plugin plugin_phantom
+2023-06-04 19:24:20,730 [INFO] yandextank.core.tankcore tankcore.py:568	Cleaning up plugin plugin_rcheck
+2023-06-04 19:24:20,730 [INFO] yandextank.core.tankcore tankcore.py:568	Cleaning up plugin plugin_shellexec
+2023-06-04 19:24:20,730 [INFO] yandextank.core.tankcore tankcore.py:568	Cleaning up plugin plugin_rcassert
+2023-06-04 19:24:20,730 [INFO] yandextank.core.tankcore tankcore.py:636	Releasing lock: /var/lock/lunapark_jf4us64o.lock
+2023-06-04 19:24:20,734 [INFO] yandextank.core.tankcore tankcore.py:411	Artifacts dir: /home/pmike/workspace/otus/PostgreSQL_admin_2023-02/project/pgcluster/backend/ytank/logs/2023-06-04_19-24-20.642973
+2023-06-04 19:24:20,734 [INFO] yandextank.core.tankcore tankcore.py:467	File not found to collect: validation_error.yaml
+2023-06-04 19:24:20,734 [INFO] yandextank.core.tankcore tankcore.py:472	File already exists: /home/pmike/workspace/otus/PostgreSQL_admin_2023-02/project/pgcluster/backend/ytank/logs/2023-06-04_19-24-20.642973/answ_dnkrrva2.log
+2023-06-04 19:24:20,734 [INFO] yandextank.core.tankcore tankcore.py:472	File already exists: /home/pmike/workspace/otus/PostgreSQL_admin_2023-02/project/pgcluster/backend/ytank/logs/2023-06-04_19-24-20.642973/phout_2_j8ib0p.log
+2023-06-04 19:24:20,734 [INFO] yandextank.core.tankcore tankcore.py:472	File already exists: /home/pmike/workspace/otus/PostgreSQL_admin_2023-02/project/pgcluster/backend/ytank/logs/2023-06-04_19-24-20.642973/phantom_stat_kz05wnt_.log
+2023-06-04 19:24:20,734 [INFO] yandextank.core.tankcore tankcore.py:472	File already exists: /home/pmike/workspace/otus/PostgreSQL_admin_2023-02/project/pgcluster/backend/ytank/logs/2023-06-04_19-24-20.642973/phantom_f9oy2q0r.log
+2023-06-04 19:24:20,734 [INFO] yandextank.core.tankcore tankcore.py:472	File already exists: /home/pmike/workspace/otus/PostgreSQL_admin_2023-02/project/pgcluster/backend/ytank/logs/2023-06-04_19-24-20.642973/phantom_xn_aje_i.conf
