@@ -1,0 +1,18 @@
+[Unit]
+Description=Patroni backend service
+After=network.target haproxy.service
+Wants=network-online.target haproxy.service
+
+[Service]
+User=www-data
+WorkingDirectory=/var/www/patroni
+#Environment="DBHOST=127.0.0.1"
+#Environment="DBPASSWORD=<POSTGRESPASSWORD>"
+#Environment="DBPOOL=100"
+LimitNOFILE=4096
+ExecStart=/var/www/patroni/venv/bin/python3 -m uvicorn main:app --workers 8
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target
