@@ -1,11 +1,17 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+import json
 import sys
+from lorem.text import TextLorem
 
-#SERVER_ADDRESS = '158.160.42.159'
 SERVER_ADDRESS = '10.128.0.16'
 SERVER_PORT = '1443'
+LINES_COUNT = 100
+URL = '/notes/'
+TAG = 'Normal_Requests'
+TEMPL_POST = '{}||{}||{}||{}\n'
+TEMPL_GET = '{}||{}||{}\n'
 
 
 def make_ammo(method, url, headers, case, body):
@@ -40,13 +46,31 @@ def make_ammo(method, url, headers, case, body):
     return ammo_template % (len(req), case, req)
 
 
-def main():
-    for stdin_line in sys.stdin:
+def gen_get(lines=LINES_COUNT):
+    """"""
+    for i in range(lines):
+        yield TEMPL_GET.format('GET', URL, TAG)
+
+
+def gen_post(lines=LINES_COUNT):
+    """"""
+    lorem = TextLorem(srange=(3, 50))
+    for i in range(lines):
+        body = json.dumps({'text': lorem.sentence()})
+        yield TEMPL_POST.format('POST', URL, TAG, body)
+
+
+def main(method):
+    if method == 'GET':
+        func = gen_get
+    else:
+        func = gen_post
+    for line in func():
         try:
-            method, url, case, body = stdin_line.split("||")
+            method, url, case, body = line.split("||")
             body = body.strip()
         except ValueError:
-            method, url, case = stdin_line.split("||")
+            method, url, case = line.split("||")
             body = None
 
         method, url, case = method.strip(), url.strip(), case.strip()
@@ -61,4 +85,12 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    error_message = "Usage: python ammogen.py post | python ammogen.py get"
+    try:
+        method = sys.argv[1].upper()
+        if method not in ('GET', 'POST'):
+            sys.exit(error_message)
+    except IndexError:
+        sys.exit(error_message)
+
+    main(method)
